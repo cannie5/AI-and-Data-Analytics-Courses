@@ -1,0 +1,15 @@
+import os
+base_path = 'Assignments/1/data_path'
+data = {
+    'label': ['cat', 'cow', 'dog'],
+    'data': []
+}
+for label in data['label']:
+    label_path = os.path.join(base_path, label)
+    image_paths = []
+    for i in range(1, 11):
+        img_path = os.path.join(label_path, f'{i}.jpg')
+        image_paths.append(img_path)
+    data['data'].append(image_paths)
+
+print(data)
